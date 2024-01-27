@@ -60,3 +60,7 @@ C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.csproj.Core
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.csproj.CopyComplete
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.exe
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.pdb
+C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\CircularProgressBar.dll
+C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\WinFormAnimation.dll
+C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\CircularProgressBar.xml
+C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.Settings.resources
