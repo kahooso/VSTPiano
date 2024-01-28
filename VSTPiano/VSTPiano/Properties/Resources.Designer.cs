@@ -73,6 +73,26 @@ namespace VSTPiano.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rZQfbgIeI2M {
+            get {
+                object obj = ResourceManager.GetObject("rZQfbgIeI2M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sad_boy {
+            get {
+                object obj = ResourceManager.GetObject("Sad boy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Setting_s {
             get {
                 object obj = ResourceManager.GetObject("Setting\'s", resourceCulture);
@@ -83,9 +103,19 @@ namespace VSTPiano.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WBQdk5h5h5Q_removebg_preview {
+        internal static System.Drawing.Bitmap vDI6QFiBkNk {
             get {
-                object obj = ResourceManager.GetObject("WBQdk5h5h5Q-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("vDI6QFiBkNk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ZYHX1o8uPCY {
+            get {
+                object obj = ResourceManager.GetObject("ZYHX1o8uPCY", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

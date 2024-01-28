@@ -53,7 +53,6 @@ C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\NAudio.WinMM.xml
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\System.Security.AccessControl.xml
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.csproj.AssemblyReference.cache
-C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.Form1.resources
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.Properties.Resources.resources
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.csproj.GenerateResource.cache
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.csproj.CoreCompileInputs.cache
@@ -64,3 +63,4 @@ C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\CircularProgressBar.
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\WinFormAnimation.dll
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\bin\Debug\CircularProgressBar.xml
 C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.Settings.resources
+C:\Users\ryche\Desktop\VSTPiano\VSTPiano\VSTPiano\obj\Debug\VSTPiano.MainForm.resources

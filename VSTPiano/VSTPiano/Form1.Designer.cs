@@ -1,6 +1,6 @@
 ﻿namespace VSTPiano
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.note1 = new System.Windows.Forms.Button();
             this.note2 = new System.Windows.Forms.Button();
             this.note3 = new System.Windows.Forms.Button();
@@ -67,15 +67,19 @@
             this.note13 = new System.Windows.Forms.Button();
             this.note14 = new System.Windows.Forms.Button();
             this.note16 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.volumeProgressBar = new CircularProgressBar.CircularProgressBar();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.label3 = new System.Windows.Forms.Label();
             this.panoramProgressBar = new CircularProgressBar.CircularProgressBar();
             this.label4 = new System.Windows.Forms.Label();
+            this.informationLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.settingsButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pianoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,7 +190,8 @@
             // pianoPanel
             // 
             this.pianoPanel.AutoSize = true;
-            this.pianoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(140)))));
+            this.pianoPanel.BackColor = System.Drawing.Color.Transparent;
+            this.pianoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pianoPanel.Controls.Add(this.note36);
             this.pianoPanel.Controls.Add(this.note31);
             this.pianoPanel.Controls.Add(this.note35);
@@ -227,7 +232,7 @@
             this.pianoPanel.Location = new System.Drawing.Point(19, 213);
             this.pianoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.pianoPanel.Name = "pianoPanel";
-            this.pianoPanel.Size = new System.Drawing.Size(548, 68);
+            this.pianoPanel.Size = new System.Drawing.Size(550, 175);
             this.pianoPanel.TabIndex = 21;
             // 
             // note36
@@ -596,21 +601,6 @@
             this.note16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteNotes_MouseDown);
             this.note16.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteNotes_MouseUp);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
-            this.label1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 28F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
-            this.label1.Location = new System.Drawing.Point(7, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 61);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "#keys";
-            this.label1.Visible = false;
-            // 
             // volumeProgressBar
             // 
             this.volumeProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
@@ -622,7 +612,7 @@
             this.volumeProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
             this.volumeProgressBar.InnerMargin = 2;
             this.volumeProgressBar.InnerWidth = -1;
-            this.volumeProgressBar.Location = new System.Drawing.Point(401, 8);
+            this.volumeProgressBar.Location = new System.Drawing.Point(455, 8);
             this.volumeProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.volumeProgressBar.MarqueeAnimationSpeed = 2000;
             this.volumeProgressBar.Name = "volumeProgressBar";
@@ -632,7 +622,7 @@
             this.volumeProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(140)))));
             this.volumeProgressBar.ProgressWidth = 10;
             this.volumeProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.volumeProgressBar.Size = new System.Drawing.Size(33, 32);
+            this.volumeProgressBar.Size = new System.Drawing.Size(32, 32);
             this.volumeProgressBar.StartAngle = 270;
             this.volumeProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.volumeProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -649,7 +639,7 @@
             // 
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
-            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -665,13 +655,12 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 8F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
-            this.label3.Location = new System.Drawing.Point(408, 40);
+            this.label3.Location = new System.Drawing.Point(459, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 19);
             this.label3.TabIndex = 28;
             this.label3.Text = "vol";
-            this.label3.Visible = false;
             // 
             // panoramProgressBar
             // 
@@ -684,7 +673,7 @@
             this.panoramProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
             this.panoramProgressBar.InnerMargin = 2;
             this.panoramProgressBar.InnerWidth = -1;
-            this.panoramProgressBar.Location = new System.Drawing.Point(453, 8);
+            this.panoramProgressBar.Location = new System.Drawing.Point(498, 8);
             this.panoramProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.panoramProgressBar.MarqueeAnimationSpeed = 2000;
             this.panoramProgressBar.Name = "panoramProgressBar";
@@ -694,7 +683,7 @@
             this.panoramProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(140)))));
             this.panoramProgressBar.ProgressWidth = 10;
             this.panoramProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.panoramProgressBar.Size = new System.Drawing.Size(33, 32);
+            this.panoramProgressBar.Size = new System.Drawing.Size(32, 32);
             this.panoramProgressBar.StartAngle = 270;
             this.panoramProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.panoramProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -715,13 +704,51 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 8F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
-            this.label4.Location = new System.Drawing.Point(458, 40);
+            this.label4.Location = new System.Drawing.Point(500, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 19);
             this.label4.TabIndex = 30;
             this.label4.Text = "pan";
-            this.label4.Visible = false;
+            // 
+            // informationLabel
+            // 
+            this.informationLabel.AutoSize = true;
+            this.informationLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
+            this.informationLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            this.informationLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationLabel.Font = new System.Drawing.Font("Segoe Print", 28F);
+            this.informationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
+            this.informationLabel.Location = new System.Drawing.Point(0, -3);
+            this.informationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.informationLabel.Name = "informationLabel";
+            this.informationLabel.Size = new System.Drawing.Size(139, 67);
+            this.informationLabel.TabIndex = 35;
+            this.informationLabel.Text = "#keys";
+            this.informationLabel.Click += new System.EventHandler(this.informationLabel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(96)))), ((int)(((byte)(123)))));
+            this.label1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
+            this.label1.Location = new System.Drawing.Point(544, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 19);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "sets";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(19, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(550, 144);
+            this.panel1.TabIndex = 38;
             // 
             // settingsButton
             // 
@@ -730,38 +757,51 @@
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.settingsButton.Location = new System.Drawing.Point(139, 145);
+            this.settingsButton.Location = new System.Drawing.Point(542, 7);
             this.settingsButton.Margin = new System.Windows.Forms.Padding(2);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(49, 55);
+            this.settingsButton.Size = new System.Drawing.Size(33, 33);
             this.settingsButton.TabIndex = 31;
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VSTPiano.Properties.Resources.rZQfbgIeI2M;
+            this.pictureBox1.Location = new System.Drawing.Point(-412, -13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1001, 330);
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(229)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(589, 300);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pianoPanel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.settingsButton);
+            this.Controls.Add(this.informationLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panoramProgressBar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.volumeProgressBar);
-            this.Controls.Add(this.pianoPanel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(605, 339);
             this.MinimumSize = new System.Drawing.Size(605, 339);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "#keys";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pianoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -780,7 +820,6 @@
         private System.Windows.Forms.Button note2;
         private System.Windows.Forms.Panel pianoPanel;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button note9;
         private System.Windows.Forms.Button note10;
         private System.Windows.Forms.Button note11;
@@ -815,6 +854,10 @@
         private CircularProgressBar.CircularProgressBar panoramProgressBar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Label informationLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

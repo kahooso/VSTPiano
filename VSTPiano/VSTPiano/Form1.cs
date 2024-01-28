@@ -10,7 +10,7 @@ using VSTPiano.Properties;
 
 namespace VSTPiano
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         /* notes Dictionary */
         private Dictionary<string, string> key_sounds = new Dictionary<string, string>();
@@ -19,17 +19,28 @@ namespace VSTPiano
         private PanningSampleProvider panningSampleProvider = null; /* Pan */
         private Settings Settings;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             InitializeKeySounds();
+            InitializeSettings();
+            InitializeVolume();
+        }
 
-            /* default volume */;
+        /* ---Initialize */
+
+        /* Volume */
+        private void InitializeVolume()
+        {
             volumeProgressBar.Value = 75;
             updateVolume();
         }
 
-        /* ---Initialize */
+        /* Settings */
+        private void InitializeSettings()
+        {
+            Settings = new Settings();
+        }
 
         /* KeySounds */
         private void InitializeKeySounds()
@@ -43,10 +54,26 @@ namespace VSTPiano
             }
         }
 
+        /* --Information message box */
+        private void informationLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "🎵 Hey there, welcome to #keys! 🎸\n\n" +
+                              "🔖 Version: 1.0\n" +
+                              "👤 Dev: @kahooso\n" +
+                              "📅 Release date: 2024.X.X\n\n" +
+                              "#keys is my first project, created with love and dedication. Every detail has been designed with your convenience in mind, aiming to make your time spent here as enjoyable as possible.\n\n" +
+                              "Dope Features:\n" +
+                              "- 🎹 Your musical genius is about to unfold. Get ready to rock the virtual stage with #keys!\n" +
+                              "- 🎷 I am thrilled to have you on board, and I hope your musical journey with my app is nothing short of extraordinary.\n\n" +
+                              "Feel the music, give me your feedback, and if you're stuck, I'm here to help you. Thanks for rocking out with #keys!\n\n" +
+                              "Keep the vibes alive,\n@kahooso 🎤🎶", "Welcome to #keys!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         /* ---form loader */
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Visible = true;
+            
         }
 
         /* ---notes */
@@ -100,12 +127,9 @@ namespace VSTPiano
         }
 
         /* show note's button */
-
         private bool notesVisible = true;
         private void showNotesButton_Click(object sender, EventArgs e)
         {
-            
-            // Массив нот
             string[] charNotes = { "C", "D", "E", "F", "G", "A", "B" };
             
             Button[] whiteNotes = { 
@@ -189,17 +213,19 @@ namespace VSTPiano
         }
 
         /* Settings button */
-
         private void panoramProgressBar_MouseCaptureChanged(object sender, EventArgs e)
         {
             panoramProgressBar.Value = 100;
         }
 
         /* Open Settings Form */
+        private bool settingsFormOpened = false;
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            Settings = new Settings();
+            Settings.Size = this.Size;
+            Settings.ShowNotesEvent += showNotesButton_Click;
             Settings.Show();
+            settingsFormOpened = true;
         }
     }
 }

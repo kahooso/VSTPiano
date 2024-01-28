@@ -127,13 +127,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WBQdk5h5h5Q-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Kitten.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Setting%27s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sad boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZYHX1o8uPCY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vDI6QFiBkNk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rZQfbgIeI2M.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
