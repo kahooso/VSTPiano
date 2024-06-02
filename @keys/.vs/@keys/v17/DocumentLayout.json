@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\@keys\\@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\@keys\\@keys\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\@keys\\@keys\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 205,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "@keys\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.Designer.cs",
+              "RelativeToolTip": "@keys\\Form1.Designer.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAiwEYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T20:39:57.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.cs",
+              "RelativeDocumentMoniker": "@keys\\Form1.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.cs",
+              "RelativeToolTip": "@keys\\Form1.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAcwLMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:18:22.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.cs",
+              "RelativeDocumentMoniker": "@keys\\Form1.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "@keys\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:07:05.71Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "@keys\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\@keys\\@keys\\Properties\\Resources.resx",
+              "RelativeToolTip": "@keys\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-02T19:56:21.494Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
