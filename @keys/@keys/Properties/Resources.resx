@@ -118,6 +118,114 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ambient_A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_A_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_A_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_A_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_A_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_B4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_B4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_B5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_B5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_B6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_B6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_C_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_C_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_D_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_D_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_E4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_E4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_E5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_E5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_E6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_E6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_F_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_F_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ambient_G_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambient_G_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="default_A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default_A4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -229,10 +337,148 @@
   <data name="D_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\D#.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="electro_A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_A_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_A_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_A_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_A_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_B4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_B4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_B5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_B5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_B6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_B6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_C_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_C_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_D_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_D_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_E4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_E4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_E5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_E5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_E6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_E6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_F_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_F_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G_4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G_5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="electro_G_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electro_G_6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hands" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hands.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invisible_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invisible_eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="packet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\packet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="start_recording" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start_recording.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stop_recording" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop_recording.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visible_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visible_eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
