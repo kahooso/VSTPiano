@@ -272,7 +272,7 @@ namespace _keys
 
         private void whiteKeys_MouseUp(object sender, MouseEventArgs e)
         {
-            ((Button)sender).BackColor = ColorTranslator.FromHtml("#EAF4E1");
+            ((Button)sender).BackColor = current_white_key;
         }
 
         private void whiteKeys_MouseDown(object sender, MouseEventArgs e)
@@ -287,7 +287,7 @@ namespace _keys
 
         private void blackKeys_MouseUp(object sender, MouseEventArgs e)
         {
-            ((Button)sender).BackColor = ColorTranslator.FromHtml("#567856");
+            ((Button)sender).BackColor = current_black_key;
         }
 
         // exit
@@ -396,6 +396,7 @@ namespace _keys
             settings_form.ShowDialog();
             this.Show();
         }
+        private Color current_white_key = Color.FromArgb(255, 234, 244, 225), current_black_key = ColorTranslator.FromHtml("#567856");
         private void OnApplySettings(Color whiteNotesColor, Color blackNotesColor, Color mainPanelColor, Color pianoPanelColor, Color toolStripColor, Color menuStripColor)
         {
             pianoPanel.BackColor = pianoPanelColor;
@@ -404,6 +405,10 @@ namespace _keys
             mainPanel.BackColor = mainPanelColor;
             Button[] white_keys = { C_button, D_button, E_button, F_button, G_button, A_button, B_button };
             Button[] black_keys = { C_sharp_button, D_sharp_button, F_sharp_button, G_sharp_button, A_sharp_button };
+
+            current_white_key = whiteNotesColor;
+            current_black_key = blackNotesColor;
+
             foreach (var key in white_keys) { key.BackColor = whiteNotesColor; }
             foreach (var key in black_keys) { key.BackColor = blackNotesColor; }
         }
