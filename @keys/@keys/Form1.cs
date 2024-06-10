@@ -4,7 +4,8 @@ using System.IO;
 using NAudio.Wave;
 using System.Collections.Generic;
 using System.Drawing;
-using AudioSwitcher.AudioApi.CoreAudio;
+using System.Diagnostics;
+using NAudio.CoreAudioApi;
 
 namespace _keys
 {
@@ -34,10 +35,13 @@ namespace _keys
 
         // INITIALIZATIONS
 
-        private CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+        private MMDeviceEnumerator deviceEnumerator;
+        private MMDevice defaultPlaybackDevice;
         private void InitializeAudioDevice()
         {
-            defaultPlaybackDevice.Volume = 80;
+            deviceEnumerator = new MMDeviceEnumerator();
+            defaultPlaybackDevice = deviceEnumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
+            defaultPlaybackDevice.AudioEndpointVolume.MasterVolumeLevelScalar = 0.8f; // Установить громкость на 80%
         }
         private void InitializeVolume()
         {
@@ -119,56 +123,53 @@ namespace _keys
 
         private void volumeTrackBar_Scroll(object sender, EventArgs e)
         {
-            defaultPlaybackDevice.Volume = volumeTrackBar.Value;
+            defaultPlaybackDevice.AudioEndpointVolume.MasterVolumeLevelScalar = volumeTrackBar.Value / 100f;
         }
 
         /// RECORDING
 
         private WasapiLoopbackCapture capture;
-        private WaveFileWriter writer;
         private string outputFilename;
 
         private void StartRecording()
         {
-            try
+            var dialog = new SaveFileDialog();
+            dialog.Filter = "wave files | *.wav";
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+            outputFilename = dialog.FileName;
+            capture = new NAudio.Wave.WasapiLoopbackCapture();
+            var writer = new WaveFileWriter(outputFilename, capture.WaveFormat);
+            capture.DataAvailable += async (s, t) =>
             {
-                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                if (writer != null)
                 {
-                    saveFileDialog.Filter = "WAV file|*.wav";
-                    saveFileDialog.Title = "Save an Audio File";
-                    saveFileDialog.FileName = "output.wav";
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK) outputFilename = saveFileDialog.FileName;
-                    else return;
+                    await writer.WriteAsync(t.Buffer, 0, t.BytesRecorded);
+                    await writer.FlushAsync();
                 }
-                capture = new WasapiLoopbackCapture();
-                writer = new WaveFileWriter(outputFilename, capture.WaveFormat);
-                capture.DataAvailable += (s, a) =>
-                {
-                    writer.Write(a.Buffer, 0, a.BytesRecorded);
-                };
-                capture.RecordingStopped += (s, a) =>
+            };
+            capture.RecordingStopped += (s, t) =>
+            {
+                if (writer != null)
                 {
                     writer.Dispose();
                     writer = null;
-                    capture.Dispose();
-                };
-                capture.StartRecording();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "@error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                }
+                capture.Dispose();
+            };
+            capture.StartRecording();
         }
         private void StopRecording()
         {
-            try
+            capture.StopRecording();
+            if (outputFilename == null)
+                return;
+            var processStartInfo = new ProcessStartInfo
             {
-                capture.StopRecording();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "@error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                FileName = Path.GetDirectoryName(outputFilename),
+                UseShellExecute = true
+            };
+            Process.Start(processStartInfo);
         }
 
         // start recording
@@ -188,7 +189,6 @@ namespace _keys
             recordStopToolStripButton.Enabled = false;
             recordStartToolStripButton.Enabled = true;
         }
-
         private void analyzeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MediaForm media_form = new MediaForm();

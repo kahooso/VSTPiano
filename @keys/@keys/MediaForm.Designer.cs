@@ -43,6 +43,7 @@
             this.notesPictureBox = new System.Windows.Forms.PictureBox();
             this.onlyWaveLabel = new System.Windows.Forms.Label();
             this.customWaveViewer = new _keys.CustomWaveViewer();
+            this.fitLinkLabel = new System.Windows.Forms.LinkLabel();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesPictureBox)).BeginInit();
@@ -170,11 +171,24 @@
             this.customWaveViewer.TabIndex = 10;
             this.customWaveViewer.WaveStream = null;
             // 
+            // fitLinkLabel
+            // 
+            this.fitLinkLabel.AutoSize = true;
+            this.fitLinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fitLinkLabel.Location = new System.Drawing.Point(738, 220);
+            this.fitLinkLabel.Name = "fitLinkLabel";
+            this.fitLinkLabel.Size = new System.Drawing.Size(52, 13);
+            this.fitLinkLabel.TabIndex = 12;
+            this.fitLinkLabel.TabStop = true;
+            this.fitLinkLabel.Text = "fit waves!";
+            this.fitLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.fitLinkLabel_LinkClicked);
+            // 
             // MediaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.fitLinkLabel);
             this.Controls.Add(this.onlyWaveLabel);
             this.Controls.Add(this.customWaveViewer);
             this.Controls.Add(this.directionLabel);
@@ -212,5 +226,6 @@
         private System.Windows.Forms.ToolStripMenuItem analizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label onlyWaveLabel;
+        private System.Windows.Forms.LinkLabel fitLinkLabel;
     }
 }

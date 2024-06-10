@@ -3,14 +3,15 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 
 namespace _keys
 {
     public partial class MediaForm : Form
     {
-        List<string> filtered_files = new List<string>();
-        FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-        int current_file = 0;
+        private List<string> filtered_files = new List<string>();
+        private FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+        private int current_file = 0;
 
         public MediaForm()
         {
@@ -37,10 +38,7 @@ namespace _keys
 
             if (result == DialogResult.OK)
             {
-                filtered_files = Directory.GetFiles(folderBrowserDialog.SelectedPath, "*.*").Where(file => file.ToLower() .EndsWith("webm") 
-                || file.ToLower().EndsWith("mp4") || file.ToLower().EndsWith("wmv") 
-                || file.ToLower().EndsWith("mkv") || file.ToLower().EndsWith("avi") 
-                || file.ToLower().EndsWith("mp3") || file.ToLower().EndsWith("wav")).ToList();
+                filtered_files = Directory.GetFiles(folderBrowserDialog.SelectedPath, "*.*").Where(file => file.ToLower().EndsWith("wav")).ToList();
             }
 
             LoadPlaylist();
@@ -119,14 +117,15 @@ namespace _keys
             {
                 onlyWaveLabel.Visible = false;
                 customWaveViewer.WaveStream = new NAudio.Wave.WaveFileReader(url);
+                customWaveViewer.FitToScreen();
             }
             else
             {
                 customWaveViewer.ResetText();
                 onlyWaveLabel.Visible = true;
             }
-
         }
+
         private void ShowFileName(Label name)
         {
             directionLabel.Text = $"currenly playing -> {Path.GetFileName(mediaListBox.SelectedItem.ToString())}";
@@ -136,6 +135,8 @@ namespace _keys
 
         private void analizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try { customWaveViewer.FitToScreen(); }
+            catch { }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e) { this.Close(); }
@@ -160,6 +161,11 @@ namespace _keys
                 filtered_files = null;
             }
             this.Dispose();
+        }
+
+        private void fitLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            analizeToolStripMenuItem_Click(sender, e);
         }
     }
 }

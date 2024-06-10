@@ -3,16 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\vstpiano\\@keys\\@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|@keys||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\vstpiano\\@keys\\@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\mediaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\vstpiano\\@keys\\@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\customwaveviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|solutionrelative:@keys\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6529D0C7-5257-4AF3-A79D-448EDBDF66C6}|@keys\\@keys.csproj|c:\\users\\ryche\\onedrive\\desktop\\vstpiano\\@keys\\@keys\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,33 +39,32 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 2852,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 3294,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MediaForm.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
-              "RelativeDocumentMoniker": "@keys\\MediaForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
-              "RelativeToolTip": "@keys\\MediaForm.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAqwJEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:31:51.815Z",
+              "DocumentIndex": 1,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "@keys\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\Properties\\Resources.resx",
+              "RelativeToolTip": "@keys\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-10T23:22:19.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
-              "RelativeDocumentMoniker": "@keys\\MediaForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "@keys\\MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:31:50.155Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "DocumentIndex": 0,
+              "Title": "@keys",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\@keys.csproj",
+              "RelativeDocumentMoniker": "@keys\\@keys.csproj",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\@keys.csproj",
+              "RelativeToolTip": "@keys\\@keys.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-10T23:22:06.129Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,10 +74,55 @@
               "RelativeDocumentMoniker": "@keys\\CustomWaveViewer.cs",
               "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\CustomWaveViewer.cs",
               "RelativeToolTip": "@keys\\CustomWaveViewer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAEwAkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:05:57.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T22:29:55.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MediaForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
+              "RelativeDocumentMoniker": "@keys\\MediaForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
+              "RelativeToolTip": "@keys\\MediaForm.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAIA3wJAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T20:31:51.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomWaveViewer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\CustomWaveViewer.cs",
+              "RelativeDocumentMoniker": "@keys\\CustomWaveViewer.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\CustomWaveViewer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "@keys\\CustomWaveViewer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T22:29:06.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs",
+              "RelativeDocumentMoniker": "@keys\\MediaForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "@keys\\MediaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T22:19:22.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\Form1.cs",
+              "RelativeDocumentMoniker": "@keys\\Form1.cs",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\vstpiano\\@keys\\@keys\\Form1.cs",
+              "RelativeToolTip": "@keys\\Form1.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAwwIMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T21:44:24.924Z"
             }
           ]
         }
