@@ -94,3 +94,11 @@ C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\Xamarin.Forms.Xam
 C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\_keys.Form1.resources
 C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\_keys.RecordForm.resources
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\AudioSwitcher.AudioApi.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\Interop.WMPLib.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\Interop.WMPLib.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\@keys.csproj.ResolveComReference.cache
+C:\Users\ryche\OneDrive\Desktop\vstpiano\@keys\@keys\obj\Debug\_keys.MediaForm.resources

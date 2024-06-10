@@ -60,18 +60,28 @@
             this.interfaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.stereoCheckBox = new System.Windows.Forms.CheckBox();
+            this.mixPanel = new System.Windows.Forms.Panel();
             this.stereoTrackBar = new System.Windows.Forms.TrackBar();
-            this.volumeTrackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panLabel = new System.Windows.Forms.Label();
+            this.stereoLabel = new System.Windows.Forms.Label();
             this.panSlider = new NAudio.Gui.PanSlider();
+            this.volumeLabel = new System.Windows.Forms.Label();
+            this.panLabel = new System.Windows.Forms.Label();
+            this.volumeTrackBar = new System.Windows.Forms.TrackBar();
+            this.echoTrackBar = new System.Windows.Forms.TrackBar();
+            this.echoLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notesPictureBox = new System.Windows.Forms.PictureBox();
+            this.analyzeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pianoPanel.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.mixPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stereoTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.echoTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // C_button
@@ -84,7 +94,6 @@
             this.C_button.Text = "C";
             this.C_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.C_button.UseVisualStyleBackColor = false;
-            this.C_button.Click += new System.EventHandler(this.C_button_Click);
             this.C_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.C_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -98,7 +107,6 @@
             this.D_button.Text = "D";
             this.D_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.D_button.UseVisualStyleBackColor = false;
-            this.D_button.Click += new System.EventHandler(this.D_button_Click);
             this.D_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.D_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -112,7 +120,6 @@
             this.E_button.Text = "E";
             this.E_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.E_button.UseVisualStyleBackColor = false;
-            this.E_button.Click += new System.EventHandler(this.E_button_Click);
             this.E_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.E_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -126,7 +133,6 @@
             this.F_button.Text = "F";
             this.F_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.F_button.UseVisualStyleBackColor = false;
-            this.F_button.Click += new System.EventHandler(this.F_button_Click);
             this.F_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.F_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -140,7 +146,6 @@
             this.G_button.Text = "G";
             this.G_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.G_button.UseVisualStyleBackColor = false;
-            this.G_button.Click += new System.EventHandler(this.G_button_Click);
             this.G_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.G_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -154,7 +159,6 @@
             this.A_button.Text = "A";
             this.A_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.A_button.UseVisualStyleBackColor = false;
-            this.A_button.Click += new System.EventHandler(this.A_button_Click);
             this.A_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.A_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -168,7 +172,6 @@
             this.B_button.Text = "B";
             this.B_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.B_button.UseVisualStyleBackColor = false;
-            this.B_button.Click += new System.EventHandler(this.B_button_Click);
             this.B_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseDown);
             this.B_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.whiteKeys_MouseUp);
             // 
@@ -183,7 +186,6 @@
             this.C_sharp_button.Text = "C#";
             this.C_sharp_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.C_sharp_button.UseVisualStyleBackColor = false;
-            this.C_sharp_button.Click += new System.EventHandler(this.C_sharp_button_Click);
             this.C_sharp_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseDown);
             this.C_sharp_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseUp);
             // 
@@ -198,7 +200,6 @@
             this.D_sharp_button.Text = "D#";
             this.D_sharp_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.D_sharp_button.UseVisualStyleBackColor = false;
-            this.D_sharp_button.Click += new System.EventHandler(this.D_sharp_button_Click);
             this.D_sharp_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseDown);
             this.D_sharp_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseUp);
             // 
@@ -213,7 +214,6 @@
             this.F_sharp_button.Text = "F#";
             this.F_sharp_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.F_sharp_button.UseVisualStyleBackColor = false;
-            this.F_sharp_button.Click += new System.EventHandler(this.F_sharp_button_Click);
             this.F_sharp_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseDown);
             this.F_sharp_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseUp);
             // 
@@ -228,7 +228,6 @@
             this.G_sharp_button.Text = "G#";
             this.G_sharp_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.G_sharp_button.UseVisualStyleBackColor = false;
-            this.G_sharp_button.Click += new System.EventHandler(this.G_sharp_button_Click);
             this.G_sharp_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseDown);
             this.G_sharp_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseUp);
             // 
@@ -243,7 +242,6 @@
             this.A_sharp_button.Text = "A#";
             this.A_sharp_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.A_sharp_button.UseVisualStyleBackColor = false;
-            this.A_sharp_button.Click += new System.EventHandler(this.A_sharp_button_Click);
             this.A_sharp_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseDown);
             this.A_sharp_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.blackKeys_MouseUp);
             // 
@@ -262,7 +260,7 @@
             this.pianoPanel.Controls.Add(this.E_button);
             this.pianoPanel.Controls.Add(this.D_button);
             this.pianoPanel.Controls.Add(this.C_button);
-            this.pianoPanel.Location = new System.Drawing.Point(12, 245);
+            this.pianoPanel.Location = new System.Drawing.Point(9, 289);
             this.pianoPanel.Name = "pianoPanel";
             this.pianoPanel.Size = new System.Drawing.Size(568, 193);
             this.pianoPanel.TabIndex = 0;
@@ -281,7 +279,7 @@
             this.exitToolStripButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(586, 48);
+            this.toolStrip.Size = new System.Drawing.Size(589, 48);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -302,6 +300,7 @@
             this.recordStopToolStripButton.AutoSize = false;
             this.recordStopToolStripButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.recordStopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.recordStopToolStripButton.Enabled = false;
             this.recordStopToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("recordStopToolStripButton.Image")));
             this.recordStopToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.recordStopToolStripButton.Name = "recordStopToolStripButton";
@@ -349,16 +348,16 @@
             "C4",
             "C5",
             "C6"});
-            this.octaveComboBox.Location = new System.Drawing.Point(66, 13);
+            this.octaveComboBox.Location = new System.Drawing.Point(55, 14);
             this.octaveComboBox.Name = "octaveComboBox";
-            this.octaveComboBox.Size = new System.Drawing.Size(121, 21);
+            this.octaveComboBox.Size = new System.Drawing.Size(50, 21);
             this.octaveComboBox.TabIndex = 2;
             this.octaveComboBox.SelectedIndexChanged += new System.EventHandler(this.octaveComboBox_SelectedIndexChanged);
             // 
             // octaveLabel
             // 
             this.octaveLabel.AutoSize = true;
-            this.octaveLabel.Location = new System.Drawing.Point(15, 17);
+            this.octaveLabel.Location = new System.Drawing.Point(9, 17);
             this.octaveLabel.Name = "octaveLabel";
             this.octaveLabel.Size = new System.Drawing.Size(40, 13);
             this.octaveLabel.TabIndex = 3;
@@ -372,15 +371,15 @@
             "default",
             "electro",
             "ambient"});
-            this.pianoComboBox.Location = new System.Drawing.Point(66, 49);
+            this.pianoComboBox.Location = new System.Drawing.Point(55, 41);
             this.pianoComboBox.Name = "pianoComboBox";
-            this.pianoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.pianoComboBox.Size = new System.Drawing.Size(81, 21);
             this.pianoComboBox.TabIndex = 4;
             // 
             // pianoLabel
             // 
             this.pianoLabel.AutoSize = true;
-            this.pianoLabel.Location = new System.Drawing.Point(15, 53);
+            this.pianoLabel.Location = new System.Drawing.Point(9, 44);
             this.pianoLabel.Name = "pianoLabel";
             this.pianoLabel.Size = new System.Drawing.Size(33, 13);
             this.pianoLabel.TabIndex = 5;
@@ -391,10 +390,11 @@
             this.menuStrip.BackColor = System.Drawing.SystemColors.Info;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.interfaceToolStripMenuItem});
+            this.interfaceToolStripMenuItem,
+            this.analyzeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(586, 24);
+            this.menuStrip.Size = new System.Drawing.Size(589, 24);
             this.menuStrip.TabIndex = 6;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -437,95 +437,147 @@
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.Info;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainPanel.Controls.Add(this.stereoCheckBox);
-            this.mainPanel.Controls.Add(this.stereoTrackBar);
-            this.mainPanel.Controls.Add(this.volumeTrackBar);
-            this.mainPanel.Controls.Add(this.label1);
-            this.mainPanel.Controls.Add(this.panLabel);
-            this.mainPanel.Controls.Add(this.panSlider);
+            this.mainPanel.Controls.Add(this.mixPanel);
             this.mainPanel.Controls.Add(this.octaveComboBox);
             this.mainPanel.Controls.Add(this.pianoLabel);
             this.mainPanel.Controls.Add(this.octaveLabel);
             this.mainPanel.Controls.Add(this.pianoComboBox);
-            this.mainPanel.Location = new System.Drawing.Point(15, 75);
+            this.mainPanel.Controls.Add(this.pictureBox1);
+            this.mainPanel.Location = new System.Drawing.Point(12, 97);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(561, 164);
+            this.mainPanel.Size = new System.Drawing.Size(561, 189);
             this.mainPanel.TabIndex = 7;
             // 
-            // stereoCheckBox
+            // mixPanel
             // 
-            this.stereoCheckBox.AutoSize = true;
-            this.stereoCheckBox.Location = new System.Drawing.Point(193, 15);
-            this.stereoCheckBox.Name = "stereoCheckBox";
-            this.stereoCheckBox.Size = new System.Drawing.Size(58, 17);
-            this.stereoCheckBox.TabIndex = 12;
-            this.stereoCheckBox.Text = "stereo:";
-            this.stereoCheckBox.UseVisualStyleBackColor = true;
-            this.stereoCheckBox.CheckedChanged += new System.EventHandler(this.stereoCheckBox_CheckedChanged);
+            this.mixPanel.Controls.Add(this.stereoTrackBar);
+            this.mixPanel.Controls.Add(this.stereoLabel);
+            this.mixPanel.Controls.Add(this.panSlider);
+            this.mixPanel.Controls.Add(this.volumeLabel);
+            this.mixPanel.Controls.Add(this.panLabel);
+            this.mixPanel.Controls.Add(this.volumeTrackBar);
+            this.mixPanel.Controls.Add(this.echoTrackBar);
+            this.mixPanel.Controls.Add(this.echoLabel);
+            this.mixPanel.Location = new System.Drawing.Point(377, 14);
+            this.mixPanel.Name = "mixPanel";
+            this.mixPanel.Size = new System.Drawing.Size(170, 162);
+            this.mixPanel.TabIndex = 12;
             // 
             // stereoTrackBar
             // 
-            this.stereoTrackBar.AutoSize = false;
-            this.stereoTrackBar.Location = new System.Drawing.Point(247, 7);
-            this.stereoTrackBar.Maximum = 100;
+            this.stereoTrackBar.LargeChange = 2000;
+            this.stereoTrackBar.Location = new System.Drawing.Point(56, 121);
+            this.stereoTrackBar.Maximum = 30000;
             this.stereoTrackBar.Name = "stereoTrackBar";
-            this.stereoTrackBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.stereoTrackBar.Size = new System.Drawing.Size(121, 31);
-            this.stereoTrackBar.TabIndex = 11;
-            this.stereoTrackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.stereoTrackBar.Value = 75;
-            this.stereoTrackBar.Scroll += new System.EventHandler(this.stereoTrackBar_Scroll);
+            this.stereoTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.stereoTrackBar.TabIndex = 13;
             // 
-            // volumeTrackBar
+            // stereoLabel
             // 
-            this.volumeTrackBar.AutoSize = false;
-            this.volumeTrackBar.Location = new System.Drawing.Point(247, 44);
-            this.volumeTrackBar.Maximum = 100;
-            this.volumeTrackBar.Name = "volumeTrackBar";
-            this.volumeTrackBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.volumeTrackBar.Size = new System.Drawing.Size(121, 31);
-            this.volumeTrackBar.TabIndex = 9;
-            this.volumeTrackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.volumeTrackBar.Value = 75;
-            this.volumeTrackBar.Scroll += new System.EventHandler(this.volumeTrackBar_Scroll);
+            this.stereoLabel.AutoSize = true;
+            this.stereoLabel.Location = new System.Drawing.Point(9, 131);
+            this.stereoLabel.Name = "stereoLabel";
+            this.stereoLabel.Size = new System.Drawing.Size(39, 13);
+            this.stereoLabel.TabIndex = 12;
+            this.stereoLabel.Text = "stereo:";
             // 
-            // label1
+            // panSlider
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "volume:";
+            this.panSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(120)))), ((int)(((byte)(86)))));
+            this.panSlider.Location = new System.Drawing.Point(70, 90);
+            this.panSlider.Name = "panSlider";
+            this.panSlider.Pan = 0F;
+            this.panSlider.Size = new System.Drawing.Size(90, 25);
+            this.panSlider.TabIndex = 6;
+            this.panSlider.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panSlider_Scroll);
+            // 
+            // volumeLabel
+            // 
+            this.volumeLabel.AutoSize = true;
+            this.volumeLabel.Location = new System.Drawing.Point(9, 20);
+            this.volumeLabel.Name = "volumeLabel";
+            this.volumeLabel.Size = new System.Drawing.Size(41, 13);
+            this.volumeLabel.TabIndex = 11;
+            this.volumeLabel.Text = "volume";
             // 
             // panLabel
             // 
             this.panLabel.AutoSize = true;
-            this.panLabel.Location = new System.Drawing.Point(16, 91);
+            this.panLabel.Location = new System.Drawing.Point(9, 97);
             this.panLabel.Name = "panLabel";
             this.panLabel.Size = new System.Drawing.Size(28, 13);
             this.panLabel.TabIndex = 7;
             this.panLabel.Text = "pan:";
             // 
-            // panSlider
+            // volumeTrackBar
             // 
-            this.panSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(120)))), ((int)(((byte)(86)))));
-            this.panSlider.Location = new System.Drawing.Point(66, 84);
-            this.panSlider.Name = "panSlider";
-            this.panSlider.Pan = 0F;
-            this.panSlider.Size = new System.Drawing.Size(121, 25);
-            this.panSlider.TabIndex = 6;
+            this.volumeTrackBar.LargeChange = 2000;
+            this.volumeTrackBar.Location = new System.Drawing.Point(56, 9);
+            this.volumeTrackBar.Maximum = 30000;
+            this.volumeTrackBar.Name = "volumeTrackBar";
+            this.volumeTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.volumeTrackBar.TabIndex = 10;
+            this.volumeTrackBar.Scroll += new System.EventHandler(this.volumeTrackBar_Scroll);
+            // 
+            // echoTrackBar
+            // 
+            this.echoTrackBar.LargeChange = 2000;
+            this.echoTrackBar.Location = new System.Drawing.Point(56, 48);
+            this.echoTrackBar.Maximum = 30000;
+            this.echoTrackBar.Name = "echoTrackBar";
+            this.echoTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.echoTrackBar.TabIndex = 8;
+            this.echoTrackBar.Scroll += new System.EventHandler(this.echoTrackBar_Scroll);
+            // 
+            // echoLabel
+            // 
+            this.echoLabel.AutoSize = true;
+            this.echoLabel.Location = new System.Drawing.Point(9, 59);
+            this.echoLabel.Name = "echoLabel";
+            this.echoLabel.Size = new System.Drawing.Size(31, 13);
+            this.echoLabel.TabIndex = 9;
+            this.echoLabel.Text = "echo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::_keys.Properties.Resources.rain;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(496, 189);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // notesPictureBox
+            // 
+            this.notesPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.notesPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.notesPictureBox.Image = global::_keys.Properties.Resources.aesthetic;
+            this.notesPictureBox.InitialImage = global::_keys.Properties.Resources.notes;
+            this.notesPictureBox.Location = new System.Drawing.Point(0, 64);
+            this.notesPictureBox.Name = "notesPictureBox";
+            this.notesPictureBox.Size = new System.Drawing.Size(590, 443);
+            this.notesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.notesPictureBox.TabIndex = 8;
+            this.notesPictureBox.TabStop = false;
+            // 
+            // analyzeToolStripMenuItem
+            // 
+            this.analyzeToolStripMenuItem.Name = "analyzeToolStripMenuItem";
+            this.analyzeToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.analyzeToolStripMenuItem.Text = "analyze";
+            this.analyzeToolStripMenuItem.Click += new System.EventHandler(this.analyzeToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(586, 450);
+            this.BackgroundImage = global::_keys.Properties.Resources.rain;
+            this.ClientSize = new System.Drawing.Size(589, 503);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.pianoPanel);
+            this.Controls.Add(this.notesPictureBox);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
@@ -535,6 +587,8 @@
             this.Text = "@keys";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.pianoPanel.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
@@ -542,8 +596,13 @@
             this.menuStrip.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.mixPanel.ResumeLayout(false);
+            this.mixPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stereoTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.echoTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,10 +642,16 @@
         private System.Windows.Forms.ToolStripButton exitToolStripButton;
         private System.Windows.Forms.Label panLabel;
         private NAudio.Gui.PanSlider panSlider;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label echoLabel;
+        private System.Windows.Forms.TrackBar echoTrackBar;
+        private System.Windows.Forms.Label volumeLabel;
         private System.Windows.Forms.TrackBar volumeTrackBar;
+        private System.Windows.Forms.PictureBox notesPictureBox;
+        private System.Windows.Forms.Panel mixPanel;
         private System.Windows.Forms.TrackBar stereoTrackBar;
-        private System.Windows.Forms.CheckBox stereoCheckBox;
+        private System.Windows.Forms.Label stereoLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem analyzeToolStripMenuItem;
     }
 }
 

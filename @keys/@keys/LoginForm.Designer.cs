@@ -34,6 +34,8 @@
             this.logInButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // signInLinkLabel
@@ -41,7 +43,7 @@
             this.signInLinkLabel.AutoSize = true;
             this.signInLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.signInLinkLabel.ForeColor = System.Drawing.SystemColors.Info;
-            this.signInLinkLabel.Location = new System.Drawing.Point(114, 96);
+            this.signInLinkLabel.Location = new System.Drawing.Point(287, 107);
             this.signInLinkLabel.Name = "signInLinkLabel";
             this.signInLinkLabel.Size = new System.Drawing.Size(107, 13);
             this.signInLinkLabel.TabIndex = 11;
@@ -77,7 +79,7 @@
             this.logInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logInButton.Location = new System.Drawing.Point(21, 66);
             this.logInButton.Name = "logInButton";
-            this.logInButton.Size = new System.Drawing.Size(200, 27);
+            this.logInButton.Size = new System.Drawing.Size(373, 38);
             this.logInButton.TabIndex = 8;
             this.logInButton.Text = "log in";
             this.logInButton.UseVisualStyleBackColor = false;
@@ -87,15 +89,26 @@
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(79, 41);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(142, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(315, 20);
             this.passwordTextBox.TabIndex = 7;
             // 
             // loginTextBox
             // 
             this.loginTextBox.Location = new System.Drawing.Point(79, 16);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(142, 20);
+            this.loginTextBox.Size = new System.Drawing.Size(315, 20);
             this.loginTextBox.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::_keys.Properties.Resources.notes;
+            this.pictureBox1.Location = new System.Drawing.Point(-11, 123);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(426, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -103,7 +116,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::_keys.Properties.Resources.library;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(238, 176);
+            this.ClientSize = new System.Drawing.Size(404, 272);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.signInLinkLabel);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.loginLabel);
@@ -114,6 +128,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "@log in";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +142,6 @@
         private System.Windows.Forms.Button logInButton;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox loginTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

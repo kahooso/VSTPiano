@@ -6,7 +6,7 @@ namespace _keys
 {
     public partial class SettingsForm : Form
     {
-        public delegate void ApplySettingsHandler(Color whiteNotesColor, Color blackNotesColor, Color mainPanelColor, Color pianoPanelColor, Color toolStripColor, Color menuStripColor);
+        public delegate void ApplySettingsHandler(Color whiteNotesColor, Color blackNotesColor, Color pressedColor, Color mainPanelColor, Color pianoPanelColor, Color toolStripColor, Color menuStripColor);
         public event ApplySettingsHandler ApplySettings;
 
         public SettingsForm()
@@ -20,6 +20,7 @@ namespace _keys
         {
             mainPanel.BackColor = mainPanelLabel.ForeColor = pianoPanel.BackColor = pianoPanelLabel.ForeColor = toolStrip.BackColor = toolStripLabel.ForeColor = SystemColors.Info;
             whiteNote.BackColor = whiteNoteLabel.ForeColor = menuStrip.BackColor = menuStripLabel.ForeColor = Color.FromArgb(255, 234, 244, 225);
+            pressedNote.BackColor = pressedNoteLabel.ForeColor = ColorTranslator.FromHtml("#94C9A9");
             blackNote.BackColor = blackNoteLabel.ForeColor = Color.FromArgb(255, 86, 120, 86);
             settingsPanel.BackColor = Color.FromArgb(127, 255, 255, 225);
         }
@@ -33,6 +34,7 @@ namespace _keys
             ApplySettings?.Invoke(
                 whiteNote.BackColor,
                 blackNote.BackColor,
+                pressedNote.BackColor,
                 mainPanel.BackColor,
                 pianoPanel.BackColor,
                 toolStrip.BackColor,

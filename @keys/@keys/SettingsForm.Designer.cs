@@ -47,6 +47,8 @@
             this.blackNoteLabel = new System.Windows.Forms.Label();
             this.whiteNote = new System.Windows.Forms.Panel();
             this.resetButton = new System.Windows.Forms.Button();
+            this.pressedNoteLabel = new System.Windows.Forms.Label();
+            this.pressedNote = new System.Windows.Forms.Panel();
             this.settingsPanel.SuspendLayout();
             this.stripsGroupBox.SuspendLayout();
             this.panelGroupBox.SuspendLayout();
@@ -82,9 +84,9 @@
             this.stripsGroupBox.Controls.Add(this.toolStripLabel);
             this.stripsGroupBox.Controls.Add(this.menuStrip);
             this.stripsGroupBox.Controls.Add(this.toolStrip);
-            this.stripsGroupBox.Location = new System.Drawing.Point(18, 120);
+            this.stripsGroupBox.Location = new System.Drawing.Point(18, 139);
             this.stripsGroupBox.Name = "stripsGroupBox";
-            this.stripsGroupBox.Size = new System.Drawing.Size(116, 100);
+            this.stripsGroupBox.Size = new System.Drawing.Size(116, 119);
             this.stripsGroupBox.TabIndex = 16;
             this.stripsGroupBox.TabStop = false;
             this.stripsGroupBox.Text = "strips";
@@ -94,18 +96,18 @@
             this.menuStripLabel.AutoSize = true;
             this.menuStripLabel.Location = new System.Drawing.Point(16, 33);
             this.menuStripLabel.Name = "menuStripLabel";
-            this.menuStripLabel.Size = new System.Drawing.Size(58, 13);
+            this.menuStripLabel.Size = new System.Drawing.Size(36, 13);
             this.menuStripLabel.TabIndex = 4;
-            this.menuStripLabel.Text = "menu strip:";
+            this.menuStripLabel.Text = "menu:";
             // 
             // toolStripLabel
             // 
             this.toolStripLabel.AutoSize = true;
-            this.toolStripLabel.Location = new System.Drawing.Point(16, 62);
+            this.toolStripLabel.Location = new System.Drawing.Point(16, 64);
             this.toolStripLabel.Name = "toolStripLabel";
-            this.toolStripLabel.Size = new System.Drawing.Size(49, 13);
+            this.toolStripLabel.Size = new System.Drawing.Size(27, 13);
             this.toolStripLabel.TabIndex = 5;
-            this.toolStripLabel.Text = "tool strip:";
+            this.toolStripLabel.Text = "tool:";
             // 
             // menuStrip
             // 
@@ -136,7 +138,7 @@
             this.panelGroupBox.Controls.Add(this.pianoPanel);
             this.panelGroupBox.Location = new System.Drawing.Point(140, 14);
             this.panelGroupBox.Name = "panelGroupBox";
-            this.panelGroupBox.Size = new System.Drawing.Size(116, 100);
+            this.panelGroupBox.Size = new System.Drawing.Size(116, 119);
             this.panelGroupBox.TabIndex = 15;
             this.panelGroupBox.TabStop = false;
             this.panelGroupBox.Text = "panels";
@@ -146,18 +148,18 @@
             this.mainPanelLabel.AutoSize = true;
             this.mainPanelLabel.Location = new System.Drawing.Point(23, 32);
             this.mainPanelLabel.Name = "mainPanelLabel";
-            this.mainPanelLabel.Size = new System.Drawing.Size(61, 13);
+            this.mainPanelLabel.Size = new System.Drawing.Size(32, 13);
             this.mainPanelLabel.TabIndex = 2;
-            this.mainPanelLabel.Text = "main panel:";
+            this.mainPanelLabel.Text = "main:";
             // 
             // pianoPanelLabel
             // 
             this.pianoPanelLabel.AutoSize = true;
             this.pianoPanelLabel.Location = new System.Drawing.Point(19, 62);
             this.pianoPanelLabel.Name = "pianoPanelLabel";
-            this.pianoPanelLabel.Size = new System.Drawing.Size(65, 13);
+            this.pianoPanelLabel.Size = new System.Drawing.Size(36, 13);
             this.pianoPanelLabel.TabIndex = 3;
-            this.pianoPanelLabel.Text = "piano panel:";
+            this.pianoPanelLabel.Text = "piano:";
             // 
             // mainPanel
             // 
@@ -182,13 +184,15 @@
             // notesGroupBox
             // 
             this.notesGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.notesGroupBox.Controls.Add(this.pressedNote);
+            this.notesGroupBox.Controls.Add(this.pressedNoteLabel);
             this.notesGroupBox.Controls.Add(this.whiteNoteLabel);
             this.notesGroupBox.Controls.Add(this.blackNote);
             this.notesGroupBox.Controls.Add(this.blackNoteLabel);
             this.notesGroupBox.Controls.Add(this.whiteNote);
             this.notesGroupBox.Location = new System.Drawing.Point(18, 14);
             this.notesGroupBox.Name = "notesGroupBox";
-            this.notesGroupBox.Size = new System.Drawing.Size(116, 100);
+            this.notesGroupBox.Size = new System.Drawing.Size(116, 119);
             this.notesGroupBox.TabIndex = 14;
             this.notesGroupBox.TabStop = false;
             this.notesGroupBox.Text = "notes";
@@ -198,15 +202,15 @@
             this.whiteNoteLabel.AutoSize = true;
             this.whiteNoteLabel.Location = new System.Drawing.Point(16, 32);
             this.whiteNoteLabel.Name = "whiteNoteLabel";
-            this.whiteNoteLabel.Size = new System.Drawing.Size(64, 13);
+            this.whiteNoteLabel.Size = new System.Drawing.Size(35, 13);
             this.whiteNoteLabel.TabIndex = 0;
-            this.whiteNoteLabel.Text = "white notes:";
+            this.whiteNoteLabel.Text = "white:";
             // 
             // blackNote
             // 
             this.blackNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.blackNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.blackNote.Location = new System.Drawing.Point(86, 60);
+            this.blackNote.Location = new System.Drawing.Point(86, 57);
             this.blackNote.Name = "blackNote";
             this.blackNote.Size = new System.Drawing.Size(16, 16);
             this.blackNote.TabIndex = 13;
@@ -217,9 +221,9 @@
             this.blackNoteLabel.AutoSize = true;
             this.blackNoteLabel.Location = new System.Drawing.Point(16, 62);
             this.blackNoteLabel.Name = "blackNoteLabel";
-            this.blackNoteLabel.Size = new System.Drawing.Size(65, 13);
+            this.blackNoteLabel.Size = new System.Drawing.Size(36, 13);
             this.blackNoteLabel.TabIndex = 1;
-            this.blackNoteLabel.Text = "black notes:";
+            this.blackNoteLabel.Text = "black:";
             // 
             // whiteNote
             // 
@@ -245,6 +249,25 @@
             this.resetButton.TabIndex = 17;
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
+            // pressedNoteLabel
+            // 
+            this.pressedNoteLabel.AutoSize = true;
+            this.pressedNoteLabel.Location = new System.Drawing.Point(16, 86);
+            this.pressedNoteLabel.Name = "pressedNoteLabel";
+            this.pressedNoteLabel.Size = new System.Drawing.Size(47, 13);
+            this.pressedNoteLabel.TabIndex = 14;
+            this.pressedNoteLabel.Text = "pressed:";
+            // 
+            // pressedNote
+            // 
+            this.pressedNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pressedNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pressedNote.Location = new System.Drawing.Point(86, 84);
+            this.pressedNote.Name = "pressedNote";
+            this.pressedNote.Size = new System.Drawing.Size(16, 16);
+            this.pressedNote.TabIndex = 14;
+            this.pressedNote.Click += new System.EventHandler(this.allPanels_Click);
             // 
             // SettingsForm
             // 
@@ -292,5 +315,7 @@
         private System.Windows.Forms.Label blackNoteLabel;
         private System.Windows.Forms.Panel whiteNote;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Panel pressedNote;
+        private System.Windows.Forms.Label pressedNoteLabel;
     }
 }

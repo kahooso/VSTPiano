@@ -4,14 +4,13 @@ using System.IO;
 using NAudio.Wave;
 using System.Collections.Generic;
 using System.Drawing;
-using NAudio.Wave.SampleProviders;
+using AudioSwitcher.AudioApi.CoreAudio;
 
 namespace _keys
 {
     public partial class Form1 : Form
     {
         private int octave;
-        private List<WaveOutEvent> activePlayers = new List<WaveOutEvent>();
         private Users _user;
 
         public Form1(Users user)
@@ -22,7 +21,30 @@ namespace _keys
             InitializeOctave();
             InitializeColors();
             InitializeFont();
+            InitializeVolume();
+            InitializeAudioDevice();
             nickNameToolStripLabel.Text = $"{user.login}^^";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer.Start();
+            InitializeCurrentUserTime();
+        }
+
+        // INITIALIZATIONS
+
+        private CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+        private void InitializeAudioDevice()
+        {
+            defaultPlaybackDevice.Volume = 80;
+        }
+        private void InitializeVolume()
+        {
+            volumeTrackBar.Minimum = 0;
+            volumeTrackBar.Maximum = 100;
+            volumeTrackBar.Value = 75;
+            volumeTrackBar.TickFrequency = 10;
         }
         private void InitializeFont() { Font = new Font("Roboto", 12, FontStyle.Regular); }
         private void InitializeColors()
@@ -51,155 +73,54 @@ namespace _keys
         {
             timer.Start();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            timer.Start();
-            InitializeCurrentUserTime();
-        }
+        private void octaveComboBox_SelectedIndexChanged(object sender, EventArgs e) { InitializeOctave(); }
+
+        // PLAY SOUNDS
 
         private void PlaySound(string note, int octave)
         {
             string resourceName = $"{pianoComboBox.Text}_{note}{octave}";
             var resource = Properties.Resources.ResourceManager.GetStream(resourceName);
             if (resource != null)
-            {
                 PlaySound(resource);
-            }
             else
-            {
                 MessageBox.Show($"sound {resourceName} not found.", "@error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
-        private WaveChannel32 waveChannel;
-        private StereoToMonoSampleProvider stereoProvider;
-        private void PlaySound(UnmanagedMemoryStream soundStream)
+        private DirectSoundOut output = null;
+
+        private BlockAlignReductionStream stream = null;
+        private void PlaySound(UnmanagedMemoryStream resource_stream)
         {
-            var memoryStream = new MemoryStream();
-            soundStream.CopyTo(memoryStream);
-            memoryStream.Position = 0;
+            WaveChannel32 wave = new WaveChannel32(new WaveFileReader(resource_stream));
+            EffectStream effect = new EffectStream(wave);
+            stream = new BlockAlignReductionStream(effect);
 
-            var waveReader = new WaveFileReader(memoryStream);
-            var bufferedWaveProvider = new BufferedWaveProvider(waveReader.WaveFormat);
-            waveChannel = new WaveChannel32(new WaveProviderToWaveStream(bufferedWaveProvider)) { Pan = panSlider.Pan / 100.0f };
+            if (echoTrackBar.Value > 0)
+                for (int i = 0; i < wave.WaveFormat.Channels; ++i)
+                    effect.Effects.Add(new Echo(echo_length, echo_factor));
 
-            // volume changing
-            waveChannel.Volume = volumeTrackBar.Value / 100.0f;
-
-            // stereo adjustment
-
-            if (!stereoCheckBox.Checked)
-            {
-                var sampleProvider = waveChannel.ToSampleProvider();
-                stereoProvider = new StereoToMonoSampleProvider(sampleProvider)
-                {
-                    LeftVolume = stereoTrackBar.Value / 100.0f,
-                    RightVolume = stereoTrackBar.Value / 100.0f
-                };
-            }
-
-            WaveOutEvent waveOut = new WaveOutEvent();
-
-            if (!stereoCheckBox.Checked) 
-            { 
-                waveOut.Init(stereoProvider); 
-            }
-            else 
-            { 
-                waveOut.Init(waveChannel); 
-            }
-
-            waveOut.PlaybackStopped += (sender, args) =>
-            {
-                waveOut.Dispose();
-                waveReader.Dispose();
-                memoryStream.Dispose();
-                activePlayers.Remove(waveOut);
-            };
-
-            activePlayers.Add(waveOut);
-
-            try
-            {
-                byte[] buffer = new byte[waveReader.Length];
-                int bytesRead;
-                while ((bytesRead = waveReader.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    bufferedWaveProvider.AddSamples(buffer, 0, bytesRead);
-                }
-            }
-            catch { }
-
-            waveOut.Play();
-
-            if (activePlayers.Count > 10)
-            {
-                var oldestPlayer = activePlayers[0];
-                oldestPlayer.Stop();
-            }
+            output = new DirectSoundOut(100);
+            output.Init(stream);
+            output.Play();
         }
 
-        private void C_button_Click(object sender, EventArgs e)
+        // echo
+
+        private int echo_length = 0;
+        private float echo_factor = 0.0f;
+        private void echoTrackBar_Scroll(object sender, EventArgs e)
         {
-            PlaySound("C", octave);
+            echo_length = echoTrackBar.Value;
+            echo_factor = echoTrackBar.Value / 32768.0f;
         }
 
-        private void C_sharp_button_Click(object sender, EventArgs e)
+        // volume
+
+        private void volumeTrackBar_Scroll(object sender, EventArgs e)
         {
-            PlaySound("C_", octave);
+            defaultPlaybackDevice.Volume = volumeTrackBar.Value;
         }
-
-        private void D_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("D", octave);
-        }
-
-        private void D_sharp_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("D_", octave);
-        }
-
-        private void E_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("E", octave);
-        }
-
-        private void F_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("F", octave);
-        }
-
-        private void F_sharp_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("F_", octave);
-        }
-
-        private void G_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("G", octave);
-        }
-
-        private void G_sharp_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("G_", octave);
-        }
-
-        private void A_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("A", octave);
-        }
-
-        private void A_sharp_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("A_", octave);
-        }
-
-        private void B_button_Click(object sender, EventArgs e)
-        {
-            PlaySound("B", octave);
-        }
-
-        private void octaveComboBox_SelectedIndexChanged(object sender, EventArgs e) { InitializeOctave(); }
 
         /// RECORDING
 
@@ -219,7 +140,6 @@ namespace _keys
                     if (saveFileDialog.ShowDialog() == DialogResult.OK) outputFilename = saveFileDialog.FileName;
                     else return;
                 }
-                MessageBox.Show("start recording", "@recording", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 capture = new WasapiLoopbackCapture();
                 writer = new WaveFileWriter(outputFilename, capture.WaveFormat);
                 capture.DataAvailable += (s, a) =>
@@ -243,7 +163,6 @@ namespace _keys
         {
             try
             {
-                MessageBox.Show("stop recording", "@recording", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 capture.StopRecording();
             }
             catch (Exception ex)
@@ -270,34 +189,40 @@ namespace _keys
             recordStartToolStripButton.Enabled = true;
         }
 
-        private void whiteKeys_MouseUp(object sender, MouseEventArgs e)
+        private void analyzeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = current_white_key;
+            MediaForm media_form = new MediaForm();
+            this.Hide();
+            media_form.ShowDialog();
+            this.Show();
         }
 
+        // NOTES
+
+        private void whiteKeys_MouseUp(object sender, MouseEventArgs e) { ((Button)sender).BackColor = current_white_key; }
         private void whiteKeys_MouseDown(object sender, MouseEventArgs e)
         {
-            ((Button)sender).BackColor = ColorTranslator.FromHtml("#94C9A9");
+            ((Button)sender).BackColor = current_pressed_key_color;
+            PlaySound(((Button)sender).Text, octave);
         }
-
+        private void blackKeys_MouseUp(object sender, MouseEventArgs e) { ((Button)sender).BackColor = current_black_key; }
         private void blackKeys_MouseDown(object sender, MouseEventArgs e)
         {
-            ((Button)sender).BackColor = ColorTranslator.FromHtml("#94C9A9");
+            ((Button)sender).BackColor = current_pressed_key_color;
+            PlaySound(((Button)sender).Text.Substring(0, ((Button)sender).Text.Length - 1) + "_", octave);
         }
+        // EXIT
 
-        private void blackKeys_MouseUp(object sender, MouseEventArgs e)
+        private void exitToolStripButton_Click(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = current_black_key;
+            this.Close();
         }
-
-        // exit
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             exitToolStripButton_Click(sender, e);
         }
 
-        // database, users, and duration
+        // DATABASE, USERS, TIME
 
         private int hour, minute, second;
         private void startstopRecordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -311,12 +236,10 @@ namespace _keys
                 recordStopToolStripButton_Click(sender, e);
             }
         }
-
         private void nickNameToolStripLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"hey, {_user.login}, you've played for {Users.ConvertSecondsToDate(_user.time)}!", "@main form", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void timer_Tick(object sender, EventArgs e)
         {
             Invoke(new Action(() =>
@@ -335,7 +258,6 @@ namespace _keys
                 timerToolStripTextBox.Text = string.Format("{0}:{1}:{2}", hour.ToString().PadLeft(2, '0'), minute.ToString().PadLeft(2, '0'), second.ToString().PadLeft(2, '0'));
             }));
         }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer.Stop();
@@ -351,41 +273,6 @@ namespace _keys
             }
         }
 
-        // exit 
-
-        private void exitToolStripButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        // main panel
-
-        // volume
-
-        private void volumeTrackBar_Scroll(object sender, EventArgs e)
-        {
-            if (waveChannel != null)
-            {
-                waveChannel.Volume = volumeTrackBar.Value / 100.0f;
-            }
-        }
-
-        // stereo
-
-        private void stereoTrackBar_Scroll(object sender, EventArgs e)
-        {
-            if (stereoProvider != null)
-            {
-                stereoProvider.LeftVolume = stereoTrackBar.Value / 100.0f;
-                stereoProvider.RightVolume = stereoTrackBar.Value / 100.0f;
-            }
-        }
-        private void stereoCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            stereoTrackBar.Enabled = !stereoTrackBar.Enabled;
-        }
-
-
         // UI settings
 
         private void interfaceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -396,50 +283,82 @@ namespace _keys
             settings_form.ShowDialog();
             this.Show();
         }
-        private Color current_white_key = Color.FromArgb(255, 234, 244, 225), current_black_key = ColorTranslator.FromHtml("#567856");
-        private void OnApplySettings(Color whiteNotesColor, Color blackNotesColor, Color mainPanelColor, Color pianoPanelColor, Color toolStripColor, Color menuStripColor)
+        private Color current_white_key = Color.FromArgb(255, 234, 244, 225), current_black_key = ColorTranslator.FromHtml("#567856"), current_pressed_key_color = ColorTranslator.FromHtml("#94C9A9");
+        private void OnApplySettings(Color whiteNotesColor, Color blackNotesColor, Color pressedNotesColor, Color mainPanelColor, Color pianoPanelColor, Color toolStripColor, Color menuStripColor)
         {
             pianoPanel.BackColor = pianoPanelColor;
             toolStrip.BackColor = toolStripColor;
             menuStrip.BackColor = menuStripColor;
             mainPanel.BackColor = mainPanelColor;
+
             Button[] white_keys = { C_button, D_button, E_button, F_button, G_button, A_button, B_button };
             Button[] black_keys = { C_sharp_button, D_sharp_button, F_sharp_button, G_sharp_button, A_sharp_button };
 
             current_white_key = whiteNotesColor;
             current_black_key = blackNotesColor;
+            current_pressed_key_color = pressedNotesColor;
 
             foreach (var key in white_keys) { key.BackColor = whiteNotesColor; }
             foreach (var key in black_keys) { key.BackColor = blackNotesColor; }
         }
-    }
 
-    // adapter, convert IWaveProvider to WaveStream
-    public class WaveProviderToWaveStream : WaveStream
-    {
-        private readonly IWaveProvider sourceProvider;
-        private long position;
-
-        public WaveProviderToWaveStream(IWaveProvider sourceProvider)
+        private void panSlider_Scroll(object sender, ScrollEventArgs e)
         {
-            this.sourceProvider = sourceProvider;
         }
 
-        public override WaveFormat WaveFormat => sourceProvider.WaveFormat;
+        // PLAY WITH KEYBOARD
 
-        public override long Length => long.MaxValue;
-
-        public override long Position
+        private HashSet<Keys> pressedKeys = new HashSet<Keys>();
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            get => position;
-            set => position = value;
+            if (!pressedKeys.Contains(e.KeyCode))
+            {
+                pressedKeys.Add(e.KeyCode);
+                Button note = GetButtonFromKey(e.KeyCode);
+                if (note != null)
+                {
+                    MouseEventArgs mouseEventArgs = new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0);
+                    if (note.Text.Length == 1)
+                        whiteKeys_MouseDown(note, mouseEventArgs);
+                    else 
+                        blackKeys_MouseDown(note, mouseEventArgs);
+                }
+            }
         }
-
-        public override int Read(byte[] buffer, int offset, int count)
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            int read = sourceProvider.Read(buffer, offset, count);
-            position += read;
-            return read;
+            if (pressedKeys.Contains(e.KeyCode))
+            {
+                pressedKeys.Remove(e.KeyCode);
+                Button note = GetButtonFromKey(e.KeyCode);
+                if (note != null)
+                {
+                    MouseEventArgs mouseEventArgs = new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0);
+                    if (note.Text.Length == 1)
+                        whiteKeys_MouseUp(note, mouseEventArgs);
+                    else 
+                        blackKeys_MouseUp(note, mouseEventArgs);
+                }
+            }
+        }
+        private Button GetButtonFromKey(Keys key)
+        {
+            switch (key)
+            {
+                case Keys.Z: return C_button;
+                case Keys.X: return C_sharp_button;
+                case Keys.C: return D_button;
+                case Keys.V: return D_sharp_button;
+                case Keys.B: return E_button;
+                case Keys.N: return F_button;
+                case Keys.M: return F_sharp_button;
+                case Keys.R: return G_button;
+                case Keys.T: return G_sharp_button;
+                case Keys.Y: return A_button;
+                case Keys.U: return A_sharp_button;
+                case Keys.I: return B_button;
+                default: return null;
+            }
         }
     }
 }
